@@ -6,12 +6,12 @@ app.register_blueprint(db_routes, url_prefix='/db')
 
 @app.route('/', methods=['GET'])
 def hello():
-	res = jsonify({'message': 'Hello from DB', 'status': 'success','code':200})
+	res = jsonify({'message': 'Hello World', 'status': 'success','code':200})
 	return res  
 
 @app.route('/health', methods=['GET'])
 def health():
-	res = jsonify({'message': 'DB Healthy', 'status': 'success','code':200})
+	res = jsonify({'message': 'Healthy', 'status': 'success','code':200})
 	return res
 
 @app.route('/data', methods=['GET'])

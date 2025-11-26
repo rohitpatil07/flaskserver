@@ -6,6 +6,8 @@ on:
     branches:
       - test
 
+  workflow_dispatch:
+
 jobs:
   check-message:
     runs-on: ubuntu-latest

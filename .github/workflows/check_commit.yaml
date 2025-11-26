@@ -1,0 +1,17 @@
+name: Enforce Commit Message Format
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited]
+    branches:
+      - test
+
+jobs:
+  check-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate commit messages
+        uses: gsactions/commit-message-checker@v2
+        with:
+          regex: '^(feature:|fix:|breaking_change:)'
+          error: 'Commit message must start with feature:, fix:, or breaking_change:'

@@ -19,7 +19,7 @@ jobs:
           version: "0.9.10"
 
       - name: Install Python
-        run: uv install python
+        run: uv python install
 
       - name: Install dependencies
         run: uv sync --locked

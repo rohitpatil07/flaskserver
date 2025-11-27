@@ -15,5 +15,5 @@ jobs:
       - name: Validate commit messages
         uses: gsactions/commit-message-checker@v2
         with:
-          regex: '^(feature:|fix:|breaking_change:)'
+          pattern : '^(feature:|fix:|breaking_change:)'
           error: 'Commit message must start with feature:, fix:, or breaking_change:'
